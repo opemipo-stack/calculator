@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <h1>quikCalc</h1>
+    <div class="hold-div">
+    <div class="input-div">
+    <input type="text" id="input-1">
+    <input type="text" id="input-2">
+</div>
+<div class="bottom-div">
+<div class="btn-div">
+    <button id="btn-1" onclick="calc()">+</button>
+    <button id="btn-2" onclick="calc1()">-</button>
+    <button id="btn-3" onclick="calc2()">x</button>
+    <button id="btn-4" onclick="calc3()">/</button>
+    <button id="btn-5" onclick="calc4()">%</button>
+    <button id="btn-6" onclick="calc5()">Pow</button>
+    <button id="btn-7" onclick="calc6()">root</button>
+</div>
+<div class="input-2-div">
+    <input type="text" id="input-3" readonly>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    let inputOne = document.getElementById('input-1')
+    let inputTwo = document.getElementById('input-2')
+    let inputThree = document.getElementById('input-3')
+ 
+function calc() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = +(num1) + +(num2)   
+}
+
+function calc1() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = +(num1) - +(num2) 
+}
+function calc2() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = +(num1) * +(num2) 
+}
+function calc3() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = +(num1) / +(num2) 
+}
+function calc4() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = +(num1) % +(num2) 
+}
+function calc5() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = Number(num1) ** +(num2) 
+}
+
+function calc6() {
+    let num1 = inputOne.value
+    let num2 = inputTwo.value
+    let num3 = inputThree.value
+    inputThree.value = Number(Math.sqrt(num1)) 
+}
+
+
+</script>

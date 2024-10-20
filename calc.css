@@ -58,6 +58,9 @@ h1 {
 }
 button:hover {
     background-color: #2196f3;
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+    cursor: pointer;
 }
 #input-3 {
     width: 282px;
